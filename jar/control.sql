@@ -55,5 +55,7 @@ CREATE TABLE `log`  (
   `is_delete` int NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 91 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+INSERT INTO `config` VALUES (1, 'source to csv', 'https://az24.vn/xsmn-sxmn-xo-so-mien-nam.html', 'az24', 'xsmn', 'D://DW', 'DDMMYYYY_XSMN', 'csv', '2023-12-12 16:35:00', 60, '2023-12-12 15:48:39', NULL, 'GET_DATA_AUTO', 1);
+INSERT INTO `config` VALUES (2, 'source to csv', 'https://az24.vn/xsmn-dd-mm-yyyy.html', 'az24', 'xsmn', 'D://DW', 'DDMMYYYY_XSMN', 'csv', NULL, 60, '2023-12-12 15:48:39', NULL, 'GET_DATA_MANUAL', 1);
 
 SET FOREIGN_KEY_CHECKS = 1;

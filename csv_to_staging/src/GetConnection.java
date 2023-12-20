@@ -27,7 +27,7 @@ public class GetConnection {
     }
 
     public void logFile(String message) throws IOException {
-        FileWriter fw = new FileWriter("D:\\DW_2023_T5_Nhom4\\file\\logs\\logs.txt", true);
+        FileWriter fw = new FileWriter("D:\\DW\\logs.txt", true);
         PrintWriter pw = new PrintWriter(fw);
         pw.println(message + "\t");
         pw.println("HH:mm:ss DD/MM/yyyy - "
@@ -40,6 +40,7 @@ public class GetConnection {
         Connection result = null;
         // 2. ket noi db control
         if (location.equalsIgnoreCase("control")) {
+        	 
             try (InputStream input = new FileInputStream(link)) {
                 Properties prop = new Properties();
                 prop.load(input);
@@ -47,6 +48,7 @@ public class GetConnection {
                 url = prop.getProperty("log.db.url");
                 username = prop.getProperty("log.db.username");
                 password = prop.getProperty("log.db.password");
+                
             } catch (IOException ex) {
                 //  8.3.1, 2.1 Thông báo không tìm thấy file
                 System.out.println("Unknown file " + link);
