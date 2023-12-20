@@ -26,7 +26,7 @@ public class Staging {
                     System.out.println("Currently, there is another process at work.");
                 }else {
                     // 5. Tìm các hàng có result Sucess, phase CSV và is_delete 0
-                         re = checResult(conn, pre_control, "Thanh cong", "source to csv", false   );
+                         re = checResult(conn, pre_control, "Thành công", "source to csv", false   );
                          int id;
                          String filename = null;
 
